@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">My Story Apps</string>
+
+    <string name="fullname">Nama</string>
+    <string name="description">Deskripsi</string>
+    <string name="time">Waktu</string>
+
+    <string name="detail_name">Nama: %s</string>
+    <string name="detail_description">Deskripsi: %s</string>
+    <string name="detail_time">Waktu: %s</string>
+
+    <string name="email">Email</string>
+    <string name="password">Katasandi</string>
+    <string name="login">Masuk</string>
+    <string name="sign_up">Keluar</string>
+    <string name="logout">Keluar</string>
+    <string name="galery">Galery</string>
+    <string name="camera">Kamera</string>
+    <string name="upload">Unggah</string>
+    <string name="back">Kembali</string>
+
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="add_your_story">Tambahkan cerita anda</string>
+    <string name="have_account">Punya akun? Masuk sekarang!</string>
+    <string name="dont_have_account">Tidak punya akun? Daftar sekarang!</string>
+    <string name="check_email_password_wrong">Tolong periksa email dan password anda kembali</string>
+    <string name="email_unique">Email ini mungkin sudah digunakan</string>
+    <string name="password_validation">Password harus lebih dari 8 karakter</string>
+    <string name="email_validation">Harus gunakan @ pada email anda</string>
+</resources>

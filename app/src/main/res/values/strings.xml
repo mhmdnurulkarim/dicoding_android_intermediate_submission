@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">My Story Apps</string>
+
+    <string name="fullname">Fullname</string>
+    <string name="description">Description</string>
+    <string name="time">Time</string>
+
+    <string name="detail_name">Name: %1$s</string>
+    <string name="detail_description">Description: %1$s</string>
+    <string name="detail_time">Create: %1$s</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">Logout</string>
+    <string name="galery">Galery</string>
+    <string name="camera">Camera</string>
+    <string name="upload">Upload</string>
+    <string name="back">Back</string>
+
+    <string name="change_language">Change language</string>
+    <string name="add_your_story">Add your story</string>
+    <string name="have_account">Have an account? Login now!</string>
+    <string name="dont_have_account">Don\'t have account? Register now!</string>
+    <string name="check_email_password_wrong">Please check your email and password again</string>
+    <string name="email_unique">This email may already be used</string>
+    <string name="password_validation">Password must be more than 8 characters</string>
+    <string name="email_validation">Must use @ in your email</string>
+</resources>
