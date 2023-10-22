@@ -55,4 +55,4 @@ The conditions that must be met are as follows.
 - Write the type and location of animation in Student Notes.
 
 ## Wireframe Submission 1
-![wireframe_submission_1](https://github.com/mhmdnurulkarim/dicoding_android_intermediate_submission/assets/65534462/d45a8da1-be52-40c8-b9b3-fa4e40d535f7)
+![Wireframe_Submission_1!](/app/src/main/res/drawable/wireframe_submission_1.jpeg "Wireframe Submission 1")
