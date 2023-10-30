@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">My Story Apps</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_detail">Detail Story</string>
+    <string name="title_activity_add">Add your story</string>
 
     <string name="fullname">Fullname</string>
     <string name="description">Description</string>
@@ -27,4 +30,9 @@
     <string name="email_unique">This email may already be used</string>
     <string name="password_validation">Password must be more than 8 characters</string>
     <string name="email_validation">Must use @ in your email</string>
+
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
 </resources>

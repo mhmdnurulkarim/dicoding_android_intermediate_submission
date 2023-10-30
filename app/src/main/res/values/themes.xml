@@ -12,6 +12,4 @@
         <!-- Secondary brand color. -->
         <item name="android:textColorPrimary">@color/black</item>
     </style>
-
-    <style name="Theme.MyStoryApps" parent="Base.Theme.MyStoryApps" />
 </resources>

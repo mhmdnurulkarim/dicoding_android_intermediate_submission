@@ -18,6 +18,7 @@ import com.example.mystoryapps.utils.Conts.EXTRA_USER
 import com.example.mystoryapps.view.ViewModelFactory
 import com.example.mystoryapps.view.add_story.AddStoryActivity
 import com.example.mystoryapps.view.detail_list_story.DetailStoryActivity
+import com.example.mystoryapps.view.maps.MapsActivity
 import com.example.mystoryapps.view.splash.SplashActivity
 
 class ListStoryActivity : AppCompatActivity() {
@@ -77,6 +78,10 @@ class ListStoryActivity : AppCompatActivity() {
 
             topAppBar.setOnMenuItemClickListener {
                 when (it.itemId) {
+                    R.id.menu_maps -> {
+                        startActivity(Intent(this@ListStoryActivity, MapsActivity::class.java))
+                    }
+
                     R.id.menu_localization -> {
                         startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
                     }

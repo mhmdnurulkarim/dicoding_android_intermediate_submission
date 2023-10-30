@@ -27,11 +27,15 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Part file: MultipartBody.Part,
         @Part("description") description: RequestBody,
+        @Field("lat") lat: Double? = null,
+        @Field("lon") lon: Double? = null
     ): GeneralResponse
 
     @GET("stories")
     suspend fun getAllStories(
-        @Header("Authorization") token: String
+        @Header("Authorization") token: String,
+        @Query("page") page: Int = 1,
+        @Query("size") size: Int = 20
     ): GetAllStoryResponse
 
     @GET("stories/{id}")

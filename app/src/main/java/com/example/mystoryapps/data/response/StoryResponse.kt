@@ -69,4 +69,10 @@ data class Story(
 
     @field:SerializedName("createdAt")
     val createdAt: String,
+
+    @field:SerializedName("lat")
+    val lat: Double? = null,
+
+    @field:SerializedName("lon")
+    val lon: Double? = null
 )

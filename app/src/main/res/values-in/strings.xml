@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">My Story Apps</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_detail">Detail Story</string>
+    <string name="title_activity_add">Add your story</string>
 
     <string name="fullname">Nama</string>
     <string name="description">Deskripsi</string>
@@ -27,4 +30,9 @@
     <string name="email_unique">Email ini mungkin sudah digunakan</string>
     <string name="password_validation">Password harus lebih dari 8 karakter</string>
     <string name="email_validation">Harus gunakan @ pada email anda</string>
+
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
 </resources>
