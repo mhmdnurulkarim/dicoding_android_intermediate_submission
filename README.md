@@ -55,4 +55,4 @@ The conditions that must be met are as follows.
 - Write the type and location of animation in Student Notes.
 
 ## Wireframe Submission 1
-![Wireframe_Submission_1!](/app/src/main/res/drawable/wireframe_submission_1.jpeg "Wireframe Submission 1")
+![Wireframe_Submission_1!](https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/academy/dos:9d2844c423f0e390adcf4cedf72d30db20220221083537.jpeg "Wireframe Submission 1")
