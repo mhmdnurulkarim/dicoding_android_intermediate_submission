@@ -1,6 +1,5 @@
-package com.example.mystoryapps.data.retrofit
+package com.example.mystoryapps.network
 
-import com.example.mystoryapps.data.response.*
 import okhttp3.*
 import retrofit2.http.*
 
@@ -24,23 +23,25 @@ interface ApiService {
     @Multipart
     @POST("stories")
     suspend fun addNewStory(
-        @Header("Authorization") token: String,
         @Part file: MultipartBody.Part,
         @Part("description") description: RequestBody,
-        @Field("lat") lat: Double? = null,
-        @Field("lon") lon: Double? = null
+        @Part("lat") lat: RequestBody?,
+        @Part("lon") lon: RequestBody?
     ): GeneralResponse
 
     @GET("stories")
     suspend fun getAllStories(
-        @Header("Authorization") token: String,
-        @Query("page") page: Int = 1,
-        @Query("size") size: Int = 20
+        @Query("page") page: Int,
+        @Query("size") size: Int
+    ): GetAllStoryResponse
+
+    @GET("stories")
+    suspend fun getAllStoriesWithLocation(
+        @Query("location") location : Int = 1
     ): GetAllStoryResponse
 
     @GET("stories/{id}")
     suspend fun getDetailStories (
-        @Header("Authorization") token: String,
         @Path("id") id: String
     ): DetailStoryResponse
 }

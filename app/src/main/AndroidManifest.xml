@@ -6,6 +6,8 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -39,22 +41,22 @@
 
         <activity
             android:name=".view.maps.MapsActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_maps"
             android:theme="@style/Theme.Material3.DayNight"/>
 
         <activity
             android:name=".view.add_story.AddStoryActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".view.cameraX.CameraActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".view.detail_list_story.DetailStoryActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".view.list_story.ListStoryActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".view.register.RegisterActivity"
             android:exported="false" />

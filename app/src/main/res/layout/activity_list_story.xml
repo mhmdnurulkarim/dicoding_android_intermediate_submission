@@ -30,10 +30,11 @@
         android:id="@+id/fab_add_story"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_add"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_gravity="bottom|right"
-        android:backgroundTint="@color/blue"
-        android:contentDescription="@string/add_your_story" />
+        android:layout_gravity="bottom|end"
+        android:contentDescription="@string/add_your_story"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/white"
+        app:backgroundTint="@color/blue"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

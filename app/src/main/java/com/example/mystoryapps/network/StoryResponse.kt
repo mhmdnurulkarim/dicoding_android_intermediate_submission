@@ -1,5 +1,6 @@
-package com.example.mystoryapps.data.response
+package com.example.mystoryapps.network
 
+import androidx.room.*
 import com.google.gson.annotations.SerializedName
 
 data class GeneralResponse(
@@ -40,7 +41,7 @@ data class GetAllStoryResponse(
     val message: String,
 
     @field:SerializedName("listStory")
-    val listStory: List<Story>
+    val listStory: List<Story> = emptyList()
 )
 
 data class DetailStoryResponse(
@@ -54,8 +55,10 @@ data class DetailStoryResponse(
     val story: Story
 )
 
+@Entity(tableName = "story")
 data class Story(
     @field:SerializedName("id")
+    @PrimaryKey
     val id: String,
 
     @field:SerializedName("name")

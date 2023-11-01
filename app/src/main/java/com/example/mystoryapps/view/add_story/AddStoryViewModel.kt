@@ -4,11 +4,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import com.example.mystoryapps.data.StoryRepository
 import kotlinx.coroutines.Dispatchers
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
+import okhttp3.*
 
 class AddStoryViewModel(private val storyRepository: StoryRepository): ViewModel() {
-    fun addStories(token: String, file: MultipartBody.Part, description: RequestBody) = storyRepository.addStories(token, file, description)
+    fun addStories(
+        file: MultipartBody.Part,
+        description: RequestBody,
+        lat: RequestBody? = null,
+        lon: RequestBody? = null
+    ) = storyRepository.addStories(file, description, lat, lon)
 
     fun getTokenUser() = storyRepository.getTokenUser().asLiveData(Dispatchers.IO)
 }

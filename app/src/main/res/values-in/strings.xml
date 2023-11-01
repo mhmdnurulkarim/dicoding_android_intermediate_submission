@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">My Story Apps</string>
-    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_maps">Maps Story</string>
     <string name="title_activity_detail">Detail Story</string>
     <string name="title_activity_add">Add your story</string>
 
@@ -17,10 +17,15 @@
     <string name="login">Masuk</string>
     <string name="sign_up">Keluar</string>
     <string name="logout">Keluar</string>
-    <string name="galery">Galery</string>
+    <string name="gallery">Galery</string>
     <string name="camera">Kamera</string>
     <string name="upload">Unggah</string>
     <string name="back">Kembali</string>
+    <string name="refresh">Coba lagi</string>
+    <string name="maps">Maps</string>
+    <string name="location">Dapatkan data lokasi</string>
+    <string name="Yes">Ya</string>
+    <string name="No">Tidak</string>
 
     <string name="change_language">Ganti Bahasa</string>
     <string name="add_your_story">Tambahkan cerita anda</string>
@@ -30,6 +35,7 @@
     <string name="email_unique">Email ini mungkin sudah digunakan</string>
     <string name="password_validation">Password harus lebih dari 8 karakter</string>
     <string name="email_validation">Harus gunakan @ pada email anda</string>
+    <string name="logout_message">Apakah kamu yakin ingin keluar?</string>
 
     <string name="normal_type">Normal</string>
     <string name="satellite_type">Satellite</string>

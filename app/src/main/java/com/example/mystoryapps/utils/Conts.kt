@@ -22,5 +22,7 @@ object Conts {
     const val FILENAME_FORMAT = "yyyyMMdd_HHmmss"
 
     //AddStory
-    const val REQUIRED_PERMISSION = Manifest.permission.CAMERA
+    const val CAMERA_PERMISSION = Manifest.permission.CAMERA
+    const val FINE_LOCATION_PERMISSION = Manifest.permission.ACCESS_FINE_LOCATION
+    const val COARSE_LOCATION_PERMISSION = Manifest.permission.ACCESS_COARSE_LOCATION
 }

@@ -2,15 +2,15 @@ package com.example.mystoryapps.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mystoryapps.data.response.Story
 import com.example.mystoryapps.databinding.ItemStoryBinding
+import com.example.mystoryapps.network.Story
 import com.example.mystoryapps.utils.Helper.loadImage
 import com.example.mystoryapps.utils.Helper.withDateFormat
 
-class ListStoryAdapter:ListAdapter<Story, ListStoryAdapter.ViewHolder>(DIFF_CALLBACK) {
+class ListStoryAdapter:PagingDataAdapter<Story, ListStoryAdapter.ViewHolder>(DIFF_CALLBACK) {
     private lateinit var onItemClickCallback: OnItemClickCallback
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
@@ -24,9 +24,11 @@ class ListStoryAdapter:ListAdapter<Story, ListStoryAdapter.ViewHolder>(DIFF_CALL
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val dataPosition = getItem(position)
-        holder.bind(dataPosition)
-        holder.itemView.setOnClickListener{
-            onItemClickCallback.onItemClicked(dataPosition)
+        if (dataPosition != null){
+            holder.bind(dataPosition)
+            holder.itemView.setOnClickListener{
+                onItemClickCallback.onItemClicked(dataPosition)
+            }
         }
     }
 

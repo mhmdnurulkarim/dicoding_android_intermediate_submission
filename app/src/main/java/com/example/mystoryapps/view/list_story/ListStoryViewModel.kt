@@ -1,14 +1,19 @@
 package com.example.mystoryapps.view.list_story
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.example.mystoryapps.data.StoryRepository
+import com.example.mystoryapps.network.Story
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class ListStoryViewModel(private val storyRepository: StoryRepository): ViewModel() {
-    fun getAllStories(token: String) = storyRepository.getAllStories(token)
+    val story: LiveData<PagingData<Story>> =
+        storyRepository.getAllStories().cachedIn(viewModelScope)
 
     fun getTokenUser() = storyRepository.getTokenUser().asLiveData(Dispatchers.IO)
 

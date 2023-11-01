@@ -20,7 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:textColor="?android:textColorPrimary"
-            app:menu="@menu/option_maps"
             app:navigationIcon="@drawable/ic_back"
             app:title="@string/title_activity_add" />
     </com.google.android.material.appbar.AppBarLayout>
@@ -55,7 +54,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:text="@string/galery"
+            android:text="@string/gallery"
             android:textColor="@color/white" />
 
         <Button
@@ -76,18 +75,29 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
         android:hint="@string/description"
-        app:layout_constraintBottom_toTopOf="@+id/btn_add_upload"
+        app:layout_constraintBottom_toTopOf="@+id/checkbox_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_add_description"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top|start"/>
+            android:gravity="top|start" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/location"
+        android:checked="false"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_upload"
+        app:layout_constraintEnd_toEndOf="@+id/edt_add_layout"
+        app:layout_constraintStart_toStartOf="@+id/edt_add_layout" />
 
     <Button
         android:id="@+id/btn_add_upload"
