@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mystoryapps.data.AuthRepository
 import com.example.mystoryapps.data.StoryRepository
 import com.example.mystoryapps.di.Injection
-import com.example.mystoryapps.di.TestInjection
 import com.example.mystoryapps.view.add_story.AddStoryViewModel
 import com.example.mystoryapps.view.detail_list_story.DetailStoryViewModel
 import com.example.mystoryapps.view.list_story.ListStoryViewModel
@@ -43,11 +42,9 @@ class ViewModelFactory private constructor(
         @Volatile
         private var instance: ViewModelFactory? = null
         fun getInstance(context: Context): ViewModelFactory =
-            instance ?: synchronized(this) {
-                instance ?: ViewModelFactory(
-                    Injection.provideStoryRepository(context),
-                    TestInjection.provideAuthRepository(context)
-                )
-            }.also { instance = it }
+            instance ?: ViewModelFactory(
+                Injection.provideStoryRepository(context),
+                Injection.provideAuthRepository(context)
+            )
     }
 }

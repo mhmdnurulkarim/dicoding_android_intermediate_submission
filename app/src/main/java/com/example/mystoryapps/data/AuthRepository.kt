@@ -2,7 +2,6 @@ package com.example.mystoryapps.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
-import com.example.mystoryapps.database.StoryDatabase
 import com.example.mystoryapps.datastore.UserPreference
 import com.example.mystoryapps.network.ApiService
 import com.example.mystoryapps.network.GeneralResponse
@@ -37,17 +36,13 @@ class AuthRepository private constructor(
         dataStore.saveTokenUser(token)
     }
 
-    fun getTokenUser() = dataStore.getTokenUser()
-
     companion object {
         @Volatile
         private var instance: AuthRepository? = null
         fun getInstance(
             apiService: ApiService,
             dataStore: UserPreference,
-        ): AuthRepository =
-            instance ?: synchronized(this) {
-                instance ?: AuthRepository(apiService, dataStore)
-            }.also { instance = it }
+
+        ): AuthRepository = instance ?: AuthRepository(apiService, dataStore)
     }
 }

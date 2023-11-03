@@ -36,6 +36,10 @@ interface ApiService {
     ): GetAllStoryResponse
 
     @GET("stories")
+    suspend fun getAllTestingStories(
+    ): GetAllStoryResponse
+
+    @GET("stories")
     suspend fun getAllStoriesWithLocation(
         @Query("location") location : Int = 1
     ): GetAllStoryResponse

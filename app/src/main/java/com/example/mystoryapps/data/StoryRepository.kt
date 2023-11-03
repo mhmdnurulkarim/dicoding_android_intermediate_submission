@@ -9,10 +9,9 @@ import androidx.paging.PagingData
 import androidx.paging.liveData
 import com.example.mystoryapps.database.StoryDatabase
 import com.example.mystoryapps.datastore.UserPreference
-import com.example.mystoryapps.network.GeneralResponse
-import com.example.mystoryapps.network.LoginResponse
-import com.example.mystoryapps.network.Story
 import com.example.mystoryapps.network.ApiService
+import com.example.mystoryapps.network.GeneralResponse
+import com.example.mystoryapps.network.Story
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 
@@ -85,9 +84,6 @@ class StoryRepository private constructor(
             apiService: ApiService,
             dataStore: UserPreference,
             database: StoryDatabase
-        ): StoryRepository =
-            instance ?: synchronized(this) {
-                instance ?: StoryRepository(apiService, dataStore, database)
-            }.also { instance = it }
+        ): StoryRepository = instance ?: StoryRepository(apiService, dataStore, database)
     }
 }

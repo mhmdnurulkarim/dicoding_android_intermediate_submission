@@ -13,13 +13,12 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mystoryapps.R
 import com.example.mystoryapps.data.Result
 import com.example.mystoryapps.databinding.ActivityRegistrasiBinding
-import com.example.mystoryapps.view.AuthViewModelFactory
 import com.example.mystoryapps.view.ViewModelFactory
 import com.example.mystoryapps.view.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrasiBinding
-    private val registerViewModel: RegisterViewModel by viewModels { AuthViewModelFactory.getInstance(this) }
+    private val registerViewModel: RegisterViewModel by viewModels { ViewModelFactory.getInstance(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

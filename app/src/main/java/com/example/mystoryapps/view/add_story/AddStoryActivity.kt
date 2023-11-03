@@ -16,7 +16,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import com.example.mystoryapps.data.Result
 import com.example.mystoryapps.databinding.ActivityAddStoryBinding
-import com.example.mystoryapps.network.ApiConfig
 import com.example.mystoryapps.utils.Conts.CAMERAX_RESULT
 import com.example.mystoryapps.utils.Conts.CAMERA_PERMISSION
 import com.example.mystoryapps.utils.Conts.COARSE_LOCATION_PERMISSION
@@ -82,21 +81,26 @@ class AddStoryActivity : AppCompatActivity() {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
-        addViewModel.getTokenUser().observe(this) {token ->
-            ApiConfig.getApiService(token)
-        }
-
         binding.apply {
             topAppBar.setNavigationOnClickListener {finish()}
             btnAddGalery.setOnClickListener { startGallery() }
             btnAddCamera.setOnClickListener { startCamera() }
             checkboxAdd.setOnCheckedChangeListener { _, isChecked ->
-                if (isChecked){
-                    checkboxAdd.isChecked = true
-                    getMyLastLocation()
+                if (location != null) {
+                    if (isChecked){
+                        checkboxAdd.isChecked = true
+                        getMyLastLocation()
+                    } else {
+                        checkboxAdd.isChecked = false
+                        location = null
+                    }
                 } else {
-                    checkboxAdd.isChecked = false
-                    location = null
+                    getMyLastLocation()
+                    Toast.makeText(
+                        this@AddStoryActivity,
+                        "Location is not found. Try Again",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
             btnAddUpload.setOnClickListener {

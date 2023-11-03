@@ -30,9 +30,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
     private val boundsBuilder = LatLngBounds.Builder()
-    private val mapsViewModel: MapsViewModel by viewModels {
-        ViewModelFactory.getInstance(this)
-    }
+    private val mapsViewModel: MapsViewModel by viewModels { ViewModelFactory.getInstance(this) }
 
     private val requestPermissionLauncher =
         registerForActivityResult(

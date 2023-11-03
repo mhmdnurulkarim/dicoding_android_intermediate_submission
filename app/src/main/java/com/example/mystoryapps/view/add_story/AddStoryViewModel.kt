@@ -13,6 +13,4 @@ class AddStoryViewModel(private val storyRepository: StoryRepository): ViewModel
         lat: RequestBody? = null,
         lon: RequestBody? = null
     ) = storyRepository.addStories(file, description, lat, lon)
-
-    fun getTokenUser() = storyRepository.getTokenUser().asLiveData(Dispatchers.IO)
 }

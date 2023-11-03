@@ -13,15 +13,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mystoryapps.R
 import com.example.mystoryapps.data.Result
 import com.example.mystoryapps.databinding.ActivityLoginBinding
-import com.example.mystoryapps.network.ApiConfig
-import com.example.mystoryapps.view.AuthViewModelFactory
 import com.example.mystoryapps.view.ViewModelFactory
 import com.example.mystoryapps.view.list_story.ListStoryActivity
 import com.example.mystoryapps.view.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    private val loginViewModel: LoginViewModel by viewModels { AuthViewModelFactory.getInstance(this) }
+    private val loginViewModel: LoginViewModel by viewModels { ViewModelFactory.getInstance(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -118,7 +116,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun onSuccess() {
-        loginViewModel.getTokenUser()
         startActivity(Intent(this@LoginActivity, ListStoryActivity::class.java))
         finishAffinity()
         binding.progressBar.visibility = View.GONE

@@ -16,7 +16,4 @@ class LoginViewModel(private val authRepository: AuthRepository): ViewModel() {
             authRepository.saveTokenUser(tokenUser)
         }
     }
-
-    fun getTokenUser() = authRepository.getTokenUser().asLiveData(Dispatchers.IO)
-
 }

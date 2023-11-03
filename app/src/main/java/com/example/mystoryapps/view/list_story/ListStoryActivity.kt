@@ -13,9 +13,6 @@ import com.example.mystoryapps.R
 import com.example.mystoryapps.adapter.ListStoryAdapter
 import com.example.mystoryapps.adapter.LoadingStateAdapter
 import com.example.mystoryapps.databinding.ActivityListStoryBinding
-import com.example.mystoryapps.datastore.UserPreference
-import com.example.mystoryapps.datastore.dataStore
-import com.example.mystoryapps.network.ApiConfig
 import com.example.mystoryapps.network.Story
 import com.example.mystoryapps.utils.Conts.EXTRA_USER
 import com.example.mystoryapps.view.ViewModelFactory
@@ -24,7 +21,6 @@ import com.example.mystoryapps.view.detail_list_story.DetailStoryActivity
 import com.example.mystoryapps.view.maps.MapsActivity
 import com.example.mystoryapps.view.splash.SplashActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import kotlinx.coroutines.runBlocking
 
 class ListStoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityListStoryBinding
@@ -40,10 +36,6 @@ class ListStoryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         onLoading()
-        listViewModel.getTokenUser().observe(this) {token ->
-            ApiConfig.getApiService(token)
-        }
-
         listViewModel.story.observe(this) { result ->
             onSuccess(result)
         }
